@@ -26,13 +26,14 @@ public class PwnedPasswords: NSObject {
     let hash = sha1(input)
     let p = prefix(hash)
     let s = suffix(hash)
+
     
     apiClient.getResponse(forPrefix: p) { string, error in
-      let response = self.parseResponse(string)
       guard error == nil else {
         completion(nil, error)
         return
       }
+      let response = self.parseResponse(string)
       
       if let occurences = response[s] {
         completion(occurences, nil)
@@ -43,7 +44,7 @@ public class PwnedPasswords: NSObject {
   }
   
   internal func sha1(_ string: String) -> String {
-  return string.sha1()
+  return string.sha1().uppercased()
   }
   
   internal func prefix(_ string: String) -> String {
@@ -57,7 +58,7 @@ public class PwnedPasswords: NSObject {
   }
   
   internal func parseResponse(_ string: String) -> Dictionary<String, Int> {
-    let arr = string.split(separator: "\n")
+    let arr = string.split(separator: "\r\n")
     var dict: Dictionary<String, Int> = [:]
     for responseString in arr {
       //Convert our string with the format 'suffix:occurences' to an arr

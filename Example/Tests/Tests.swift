@@ -65,7 +65,7 @@ class TableOfContentsSpec: QuickSpec {
           expect(error).toNot(beNil())
           expect(error).to(equal(PwnedError.noEmpty))
         }
-        it("return a reponse given a correct prefix") {
+        it("return a reponse given a correct input") {
           var occurences: Int?
           var error: Error?
           client.check(plainPassword, completion: { (o, e) in
@@ -74,7 +74,7 @@ class TableOfContentsSpec: QuickSpec {
           })
           expect(error).toEventually(beNil())
           expect(occurences).toEventuallyNot(beNil())
-          expect(occurences).toEventuallyNot(beGreaterThan(0))
+          expect(occurences).toEventually(beGreaterThan(0))
         }
       }
       
@@ -96,12 +96,17 @@ class TableOfContentsSpec: QuickSpec {
         }
         it("returns the correct respons from the actual api") {
           let realApiCLient = ApiClient()
-          var response = ""
-          realApiCLient.getResponse(forPrefix: prefix, completion: { (res, error) in
-            response = res
-          })
-          expect(response).toEventually(beAnInstanceOf(String.self), timeout: 5)
-          expect(client.parseResponse(response)).toEventually(beAnInstanceOf(Dictionary<String, Int>.self), timeout:5)
+          let c = PwnedPasswords(apiClient: realApiCLient)
+          var occurences: Int?
+          var error: Error?
+          
+          c.check(plainPassword) { o, e in
+            occurences = o
+            error = e
+          }
+          expect(error).toEventually(beNil(), timeout: 3)
+          expect(occurences).toEventually(beAnInstanceOf(Int.self), timeout: 5)
+          expect(occurences).toEventually(beGreaterThan(0))
         }
       }
     }
