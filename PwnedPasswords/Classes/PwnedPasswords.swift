@@ -29,7 +29,6 @@ public class PwnedPasswords: NSObject {
     super.init()
   }
   
-  
   /// This method will check a given password - the input against the haveibeenpwned 'Passwords' api. If an occurence of a password the completion handler will return the amount of times the password has occured in breaches. If the occurance count is 0 the password was not found in the breach data.
   ///
   /// - Parameters:
@@ -43,7 +42,6 @@ public class PwnedPasswords: NSObject {
     let hash = sha1(input)
     let p = prefix(hash)
     let s = suffix(hash)
-
     
     apiClient.getResponse(forPrefix: p) { string, error in
       guard error == nil else {
@@ -64,7 +62,6 @@ public class PwnedPasswords: NSObject {
     }
   }
   
-  
   /// Will hash the password using the sha1 algorithm
   ///
   /// - Parameter string: The input to hash
@@ -73,26 +70,21 @@ public class PwnedPasswords: NSObject {
     return string.sha1().uppercased()
   }
   
-  
   /// Gets the first 5 characters of a given string
   ///
   /// - Parameter string: The hashed password
   /// - Returns: The first 5 characters of the input
   internal func prefix(_ string: String) -> String {
-    let idx = string.index(string.startIndex, offsetBy: 5)
-    return String(string[..<idx])
+    return string.slice(to: 5)
   }
-  
   
   /// Gets the remaining characters after index 5 of a given string
   ///
   /// - Parameter string: The hashed password
   /// - Returns: The characters of the input from index 5 and forward
   internal func suffix(_ string: String) -> String {
-    let idx = string.index(string.startIndex, offsetBy: 5)
-    return String(string[idx...])
+    return string.slice(from: 5)
   }
-  
   
   /// Parses a response string from the API into a dictionary of suffixes and occurences
   ///

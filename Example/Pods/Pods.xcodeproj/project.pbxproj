@@ -60,6 +60,7 @@
 		4FB8C3F8F6573A0AD1FC48B7108B4424 /* DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88303BE73886EE1B05B4BF895E3D2B30 /* DSL.swift */; };
 		50698F14E7847E18B907E9373FBF4C21 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2D74C5C80A22A5735CDB0792DD2D62 /* Foundation.framework */; };
 		54CC2049C937561A469575AF9E6A6FE9 /* NimbleEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81CC08C62EA9830E1372ECC1A045ACE /* NimbleEnvironment.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		57CE9526206C26EB00A99828 /* String+Slice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CE9525206C26EB00A99828 /* String+Slice.swift */; };
 		57FC7BA7206BF85200EC9C18 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FC7BA6206BF85200EC9C18 /* ApiClient.swift */; };
 		58C0125D796A97541FDE3414001D8A92 /* BeEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40799A8D75639D96AAF83C7530F4A101 /* BeEmpty.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		58D964317DFBB10F54A273CB12843017 /* BeGreaterThanOrEqualTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5B1F7A89A631AF5C019394A89F340D /* BeGreaterThanOrEqualTo.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
@@ -304,6 +305,7 @@
 		55310FAAA60DA7C3C806D70D88B98B5B /* XCTestSuite+QuickTestSuiteBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "XCTestSuite+QuickTestSuiteBuilder.m"; path = "Sources/QuickObjectiveC/XCTestSuite+QuickTestSuiteBuilder.m"; sourceTree = "<group>"; };
 		556A97615EDBF6823092055EF311C17F /* HKDF.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HKDF.swift; path = Sources/CryptoSwift/HKDF.swift; sourceTree = "<group>"; };
 		573BAC0E10C772B16810CED8B1C690A0 /* SecureBytes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecureBytes.swift; path = Sources/CryptoSwift/SecureBytes.swift; sourceTree = "<group>"; };
+		57CE9525206C26EB00A99828 /* String+Slice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Slice.swift"; path = "PwnedPasswords/Classes/String+Slice.swift"; sourceTree = "<group>"; };
 		57FC7BA6206BF85200EC9C18 /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiClient.swift; path = PwnedPasswords/Classes/ApiClient.swift; sourceTree = "<group>"; };
 		5A78422239EB95752C446FF8EEE8D08E /* Data+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+Extension.swift"; path = "Sources/CryptoSwift/Foundation/Data+Extension.swift"; sourceTree = "<group>"; };
 		5BE1675B29D8B00CD6A1B7EAD1AE9CC2 /* PwnedPasswords.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PwnedPasswords.swift; path = PwnedPasswords/Classes/PwnedPasswords.swift; sourceTree = "<group>"; };
@@ -648,6 +650,7 @@
 			children = (
 				5BE1675B29D8B00CD6A1B7EAD1AE9CC2 /* PwnedPasswords.swift */,
 				57FC7BA6206BF85200EC9C18 /* ApiClient.swift */,
+				57CE9525206C26EB00A99828 /* String+Slice.swift */,
 				BFBE220EBFA6D777A536810A909C79FD /* Pod */,
 				E6AB286E35A4CF51C14090C4885836FD /* Support Files */,
 			);
@@ -1144,6 +1147,7 @@
 			files = (
 				AACFF39771317FB182E3D7B31BE2BA04 /* PwnedPasswords-dummy.m in Sources */,
 				DC3B2DB2C992F5FFD6E82F4A501126FA /* PwnedPasswords.swift in Sources */,
+				57CE9526206C26EB00A99828 /* String+Slice.swift in Sources */,
 				57FC7BA7206BF85200EC9C18 /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

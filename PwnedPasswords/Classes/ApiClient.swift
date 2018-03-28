@@ -19,7 +19,6 @@ internal protocol Api {
 internal class ApiClient: Api {
   let endpoint = "https://api.pwnedpasswords.com/range"
   
-  
   /// Makes a 'GET' request to the PwnedPasswords API using the prefix (first 5 characters) of the sha1 hashed password.
   ///
   /// - Parameters:
