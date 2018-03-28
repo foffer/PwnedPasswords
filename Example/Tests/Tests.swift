@@ -36,17 +36,6 @@ class TableOfContentsSpec: QuickSpec {
         apiClient = MockApiClient()
         client = PwnedPasswords(apiClient: apiClient)
       }
-      context("it instantiates correctly") {
-        it("with with defaults when no params is passed") {
-          let pollRate = PollRate.none
-          expect(client.pollRate).to(equal(pollRate))
-        }
-        it("with params when passed in") {
-          let pollRate = PollRate.high
-          let clientHighPollRate = PwnedPasswords(pollRate: pollRate)
-          expect(clientHighPollRate.pollRate).to(equal(pollRate))
-        }
-      }
       
       context("it hashes a string correctly") {
         it("returns the correct hash for \(plainPassword)") {

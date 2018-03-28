@@ -1,28 +1,19 @@
 import Foundation
 import CryptoSwift
 
-public enum PollRate: Int {
-  case none = 0
-  case low = 1000
-  case high = 200
-}
-
 public enum PwnedError: Error {
   case noEmpty
 }
 
 public class PwnedPasswords: NSObject {
-  let pollRate: PollRate
   let apiClient: Api
   
-  public init(pollRate: PollRate = .none) {
-    self.pollRate = pollRate
+  public override init() {
     self.apiClient = ApiClient()
     super.init()
   }
 
-  internal init(pollRate: PollRate = .none, apiClient: Api) {
-    self.pollRate = pollRate
+  internal init(apiClient: Api) {
     self.apiClient = apiClient
     super.init()
   }
