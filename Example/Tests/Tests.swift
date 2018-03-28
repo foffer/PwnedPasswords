@@ -2,7 +2,6 @@
 
 import Quick
 import Nimble
-import CryptoSwift
 
 @testable import PwnedPasswords
 
@@ -52,14 +51,6 @@ class TableOfContentsSpec: QuickSpec {
         it("returns the correct suffix") {
           let clientSuffix = client.suffix(hashedPassword)
           expect(clientSuffix).to(equal(suffix))
-        }
-        
-        it("correctly uppercases the string") {
-          let string = "hi there"
-          let hash = string.sha1()
-          let clientHash = client.sha1(string)
-          expect(hash) != clientHash
-          expect(hash.uppercased()) == clientHash
         }
       }
       
