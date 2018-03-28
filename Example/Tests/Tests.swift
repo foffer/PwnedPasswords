@@ -2,10 +2,12 @@
 
 import Quick
 import Nimble
+import CryptoSwift
+
 @testable import PwnedPasswords
 
 
-class MockApiClient: Api {
+internal class MockApiClient: Api {
   
   func getResponse(forPrefix prefix: String, completion: @escaping (String, Error?) -> Void) {
     if #available(iOS 10.0, *) {
@@ -50,6 +52,14 @@ class TableOfContentsSpec: QuickSpec {
         it("returns the correct suffix") {
           let clientSuffix = client.suffix(hashedPassword)
           expect(clientSuffix).to(equal(suffix))
+        }
+        
+        it("correctly uppercases the string") {
+          let string = "hi there"
+          let hash = string.sha1()
+          let clientHash = client.sha1(string)
+          expect(hash) != clientHash
+          expect(hash.uppercased()) == clientHash
         }
       }
       
@@ -109,6 +119,7 @@ class TableOfContentsSpec: QuickSpec {
         }
         
         it("returns the correct respons from the actual api") {
+          //This method has been disabled in the schemes test options. Reenable it to run it
           let realApiCLient = ApiClient()
           let c = PwnedPasswords(apiClient: realApiCLient)
           var occurences: Int?
