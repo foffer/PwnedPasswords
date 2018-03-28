@@ -9,6 +9,9 @@
 ## Requirements
 > `Swift 4.0`
 
+## Important
+This library never sends the password over the network nor does it store the passwords processed. You can read about how it works [here](https://www.troyhunt.com/ive-just-launched-pwned-passwords-version-2/#cloudflareprivacyandkanonymity)
+
 ## Installation
 
 PwnedPasswords is available through [CocoaPods](http://cocoapods.org). To install
