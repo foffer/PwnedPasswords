@@ -80,9 +80,14 @@ class TableOfContentsSpec: QuickSpec {
       
       context("it parses the string response") {
         it("parses the string as a dictionary") {
-          let dict = client.parseResponse(testResponse)
+          let dict = try! client.parseResponse(testResponse)
           expect(dict).to(beAnInstanceOf(Dictionary<String, Int>.self))
           expect(dict[suffix]).to(beGreaterThan(1))
+        }
+        it("throws an error given a malformed input") {
+          //In the below the return characters '\r' has been omitted, hence we expect an error to be thrown
+          let malformed = "0018A45C4D1DEF81644B54AB7F969B88D65:1\n00D4F6E8FA6EECAD2A3AA415EEC418D38EC:2\n011053FD0102E94D6AE2F8B83D76FAF94F6:1\n012A7CA357541F0AC487871FEEC"
+          expect { try client.parseResponse(malformed) }.to(throwError(PwnedError.responseMalformed))
         }
       }
       
@@ -94,6 +99,15 @@ class TableOfContentsSpec: QuickSpec {
           }
           expect(response).toEventually(equal(testResponse))
         }
+        it("returns an error given a malformed prefix") {
+          var error: Error?
+          let realApiClient = ApiClient()
+          realApiClient.getResponse(forPrefix: "- /  ;") { _, e in
+            error = e
+          }
+          expect(error).toEventuallyNot(beNil(), timeout: 5)
+        }
+        
         it("returns the correct respons from the actual api") {
           let realApiCLient = ApiClient()
           let c = PwnedPasswords(apiClient: realApiCLient)
