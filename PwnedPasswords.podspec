@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PwnedPasswords'
-  s.version          = '0.1.1'
+  s.version          = '0.1.3'
   s.summary          = 'A small Swift wrapper for haveibeenpwned.com/Passwords'
 
   s.description      = <<-DESC
@@ -22,7 +22,5 @@ Pod::Spec.new do |s|
   s.social_media_url = 'https://twitter.com/foffer'
 
   s.ios.deployment_target = '10.0'
-  s.swift_version = '4.0'
   s.source_files = 'PwnedPasswords/Classes/**/*'
-   s.dependency 'CryptoSwift'
 end

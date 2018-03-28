@@ -54,7 +54,10 @@ class ViewController: UIViewController {
 ```
 
 ## Disclaimer
-This is a wrapper over [haveibeenpwned.com/Passwords](https://haveibeenpwned.com/Passwords) created by [Troy Hunt](https://twitter.com/troyhunt). Troy has created this service and is serving it up himself. [Please use responsibly](https://haveibeenpwned.com/API/v2#AcceptableUse). Thanks to Troy for creating amazing things like these 🎉 
+This is a wrapper over [haveibeenpwned.com/Passwords](https://haveibeenpwned.com/Passwords) created by [Troy Hunt](https://twitter.com/troyhunt). Troy has created this service and is serving it up himself. [Please use responsibly](https://haveibeenpwned.com/API/v2#AcceptableUse). Thanks to Troy for creating amazing things like these 🎉
+
+## Libraries
+SHA1 algorithm taken from [https://github.com/idrougge/sha1-swift](https://github.com/idrougge/sha1-swift)
 
 ## Author
 

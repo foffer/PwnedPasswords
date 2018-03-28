@@ -16,6 +16,8 @@
 		0B431205E50D434C7F6CF907 /* Pods-PwnedPasswords_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PwnedPasswords_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PwnedPasswords_Tests/Pods-PwnedPasswords_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		0FBA418AC9CA268C8D5C7B28 /* Pods_PwnedPasswords_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PwnedPasswords_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C28A43A8DF5B0065B2F6671 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		572073AD206C49BD0067A8FA /* CommonCrypto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonCrypto.h; sourceTree = "<group>"; };
+		572073AE206C49BD0067A8FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		576356B6206BC0BC00505A8C /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* PwnedPasswords_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PwnedPasswords_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,11 +47,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		572073AC206C49BD0067A8FA /* CommonCrypto */ = {
+			isa = PBXGroup;
+			children = (
+				572073AD206C49BD0067A8FA /* CommonCrypto.h */,
+				572073AE206C49BD0067A8FA /* Info.plist */,
+			);
+			path = CommonCrypto;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACE81AFB9204008FA782 /* Tests */,
+				572073AC206C49BD0067A8FA /* CommonCrypto */,
 				607FACD11AFB9204008FA782 /* Products */,
 				FD4530E6BB7EC0DCD666AA18 /* Pods */,
 				266C563859DB791FDC6BAF64 /* Frameworks */,

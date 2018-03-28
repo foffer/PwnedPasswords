@@ -67,7 +67,7 @@ public class PwnedPasswords: NSObject {
   /// - Parameter string: The input to hash
   /// - Returns: An uppercased string representing the sha1 hash
   internal func sha1(_ string: String) -> String {
-    return string.sha1().uppercased()
+    return SHA1.hexString(from: string)?.uppercased() ?? ""
   }
   
   /// Gets the first 5 characters of a given string
