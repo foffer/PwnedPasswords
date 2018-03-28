@@ -1,5 +1,4 @@
 import Foundation
-import CryptoSwift
 
 public enum PwnedError: Error {
   case noEmpty

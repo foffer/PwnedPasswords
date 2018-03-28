@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.author           = { 'foffer' => 'foffer@gmail.com' }
   s.source           = { :git => 'https://github.com/foffer/PwnedPasswords.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/foffer'
-
+  s.swift_version = '4.0'
   s.ios.deployment_target = '10.0'
   s.source_files = 'PwnedPasswords/Classes/**/*'
 end
