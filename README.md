@@ -5,11 +5,9 @@
 [![License](https://img.shields.io/cocoapods/l/PwnedPasswords.svg?style=flat)](http://cocoapods.org/pods/PwnedPasswords)
 [![Platform](https://img.shields.io/cocoapods/p/PwnedPasswords.svg?style=flat)](http://cocoapods.org/pods/PwnedPasswords)
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+> `Swift 4.0`
 
 ## Installation
 
@@ -19,6 +17,12 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'PwnedPasswords'
 ```
+or
+
+copy the `PwnedPasswords.swift` and `ApiClient.swift` into your project.
+
+## Disclaimer
+This is a wrapper over [haveibeenpwned.com/Passwords](https://haveibeenpwned.com/Passwords) created by [Troy Hunt](https://twitter.com/troyhunt). Troy has created this service and is serving it up himself. [Please use responsibly](https://haveibeenpwned.com/API/v2#AcceptableUse). Thanks to Troy for creating amazing things like these 🎉 
 
 ## Author
 
