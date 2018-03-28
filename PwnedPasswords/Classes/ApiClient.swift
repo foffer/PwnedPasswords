@@ -19,6 +19,12 @@ internal protocol Api {
 internal class ApiClient: Api {
   let endpoint = "https://api.pwnedpasswords.com/range"
   
+  
+  /// Makes a 'GET' request to the PwnedPasswords API using the prefix (first 5 characters) of the sha1 hashed password.
+  ///
+  /// - Parameters:
+  ///   - prefix: The prefix of the sha1 hashed password
+  ///   - completion: The completion handler returning the response string or an error
   internal func getResponse(forPrefix prefix: String, completion: @escaping (String, Error?) -> Void) {
     guard let url = URL(string: "\(endpoint)/\(prefix)") else {
       completion("", ApiError.parseURL)
