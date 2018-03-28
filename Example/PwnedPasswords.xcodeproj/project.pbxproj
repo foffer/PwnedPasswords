@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		576356B7206BC0BC00505A8C /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576356B6206BC0BC00505A8C /* Data.swift */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		91B80D3FACB2E6262A0D28F7 /* Pods_PwnedPasswords_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FBA418AC9CA268C8D5C7B28 /* Pods_PwnedPasswords_Tests.framework */; };
 /* End PBXBuildFile section */
@@ -14,13 +15,14 @@
 /* Begin PBXFileReference section */
 		0B431205E50D434C7F6CF907 /* Pods-PwnedPasswords_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PwnedPasswords_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PwnedPasswords_Tests/Pods-PwnedPasswords_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		0FBA418AC9CA268C8D5C7B28 /* Pods_PwnedPasswords_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PwnedPasswords_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C28A43A8DF5B0065B2F6671 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		2C28A43A8DF5B0065B2F6671 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		576356B6206BC0BC00505A8C /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* PwnedPasswords_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PwnedPasswords_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		983DF432D594F87F0CD0BE72 /* Pods-PwnedPasswords_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PwnedPasswords_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PwnedPasswords_Tests/Pods-PwnedPasswords_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		C0B39B82F4D18809FD1E75C2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		E79BE911E8E9A7F401240B03 /* PwnedPasswords.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = PwnedPasswords.podspec; path = ../PwnedPasswords.podspec; sourceTree = "<group>"; };
+		C0B39B82F4D18809FD1E75C2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		E79BE911E8E9A7F401240B03 /* PwnedPasswords.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PwnedPasswords.podspec; path = ../PwnedPasswords.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				576356B6206BC0BC00505A8C /* Data.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -131,10 +134,6 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
-					607FACCF1AFB9204008FA782 = {
-						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0900;
-					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						LastSwiftMigration = 0900;
@@ -211,12 +210,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PwnedPasswords_Tests/Pods-PwnedPasswords_Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/PwnedPasswords/PwnedPasswords.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PwnedPasswords.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
@@ -234,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				576356B7206BC0BC00505A8C /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

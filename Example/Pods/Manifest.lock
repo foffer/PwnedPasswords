@@ -1,0 +1,25 @@
+PODS:
+  - CryptoSwift (0.8.1)
+  - Nimble (7.0.3)
+  - PwnedPasswords (0.1.0):
+    - CryptoSwift
+  - Quick (1.2.0)
+
+DEPENDENCIES:
+  - Nimble (~> 7.0.2)
+  - PwnedPasswords (from `../`)
+  - Quick (~> 1.2.0)
+
+EXTERNAL SOURCES:
+  PwnedPasswords:
+    :path: ../
+
+SPEC CHECKSUMS:
+  CryptoSwift: 4b07d5b508c1eb67bfa314a727b705f8048a85de
+  Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
+  PwnedPasswords: df966a901c475c4e654c436bfb80590e7506d87d
+  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
+
+PODFILE CHECKSUM: c9c515039bd30addc6e22295a67dab2371646371
+
+COCOAPODS: 1.4.0
