@@ -1,6 +1,5 @@
 //
 //  ApiClient.swift
-//  CryptoSwift
 //
 //  Created by Christoffer Buusmann on 28/03/2018.
 //

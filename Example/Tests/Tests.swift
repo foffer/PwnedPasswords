@@ -2,9 +2,7 @@
 
 import Quick
 import Nimble
-
 @testable import PwnedPasswords
-
 
 internal class MockApiClient: Api {
   
