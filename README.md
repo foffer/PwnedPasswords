@@ -28,14 +28,15 @@ class ViewController: UIViewController {
   @IBOutlet weak var textField: UITextField!
 
   @IBAction func buttonDidPress(_ sender: Any) {
-  guard let text = textField.text else { return }
-  let client = PwnedPasswords()
+    guard let text = textField.text else { return }
+    let client = PwnedPasswords()
 
-      client.check(text) { occurences, error in
-        guard error == nil else {
-          print(error)
-          return
-        }
+    client.check(text) { occurences, error in
+      guard error == nil else {
+        print(error)
+        return
+      }
+      
       if let occurences = occurences {
         if occurences > 0 {
           print("🛑 The password you entered has been in a breach")
