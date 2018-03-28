@@ -1,0 +1,29 @@
+{
+  "": {
+    "swift-dependencies": "/Users/christofferbuusmann/Work/PwnedPasswords/PwnedPasswords/.build/x86_64-apple-macosx10.10/debug/PwnedPasswords.build/master.swiftdeps"
+  },
+  "/Users/christofferbuusmann/Work/PwnedPasswords/PwnedPasswords/PwnedPasswords/Classes/ApiClient.swift": {
+    "dependencies": "/Users/christofferbuusmann/Work/PwnedPasswords/PwnedPasswords/.build/x86_64-apple-macosx10.10/debug/PwnedPasswords.build/ApiClient.d",
+    "object": "/Users/christofferbuusmann/Work/PwnedPasswords/PwnedPasswords/.build/x86_64-apple-macosx10.10/debug/PwnedPasswords.build/ApiClient.swift.o",
+    "swiftmodule": "/Users/christofferbuusmann/Work/PwnedPasswords/PwnedPasswords/.build/x86_64-apple-macosx10.10/debug/PwnedPasswords.build/ApiClient~partial.swiftmodule",
+    "swift-dependencies": "/Users/christofferbuusmann/Work/PwnedPasswords/PwnedPasswords/.build/x86_64-apple-macosx10.10/debug/PwnedPasswords.build/ApiClient.swiftdeps"
+  },
+  "/Users/christofferbuusmann/Work/PwnedPasswords/PwnedPasswords/PwnedPasswords/Classes/PwnedPasswords.swift": {
+    "dependencies": "/Users/christofferbuusmann/Work/PwnedPasswords/PwnedPasswords/.build/x86_64-apple-macosx10.10/debug/PwnedPasswords.build/PwnedPasswords.d",
+    "object": "/Users/christofferbuusmann/Work/PwnedPasswords/PwnedPasswords/.build/x86_64-apple-macosx10.10/debug/PwnedPasswords.build/PwnedPasswords.swift.o",
+    "swiftmodule": "/Users/christofferbuusmann/Work/PwnedPasswords/PwnedPasswords/.build/x86_64-apple-macosx10.10/debug/PwnedPasswords.build/PwnedPasswords~partial.swiftmodule",
+    "swift-dependencies": "/Users/christofferbuusmann/Work/PwnedPasswords/PwnedPasswords/.build/x86_64-apple-macosx10.10/debug/PwnedPasswords.build/PwnedPasswords.swiftdeps"
+  },
+  "/Users/christofferbuusmann/Work/PwnedPasswords/PwnedPasswords/PwnedPasswords/Classes/SHA1.swift": {
+    "dependencies": "/Users/christofferbuusmann/Work/PwnedPasswords/PwnedPasswords/.build/x86_64-apple-macosx10.10/debug/PwnedPasswords.build/SHA1.d",
+    "object": "/Users/christofferbuusmann/Work/PwnedPasswords/PwnedPasswords/.build/x86_64-apple-macosx10.10/debug/PwnedPasswords.build/SHA1.swift.o",
+    "swiftmodule": "/Users/christofferbuusmann/Work/PwnedPasswords/PwnedPasswords/.build/x86_64-apple-macosx10.10/debug/PwnedPasswords.build/SHA1~partial.swiftmodule",
+    "swift-dependencies": "/Users/christofferbuusmann/Work/PwnedPasswords/PwnedPasswords/.build/x86_64-apple-macosx10.10/debug/PwnedPasswords.build/SHA1.swiftdeps"
+  },
+  "/Users/christofferbuusmann/Work/PwnedPasswords/PwnedPasswords/PwnedPasswords/Classes/String+Slice.swift": {
+    "dependencies": "/Users/christofferbuusmann/Work/PwnedPasswords/PwnedPasswords/.build/x86_64-apple-macosx10.10/debug/PwnedPasswords.build/String+Slice.d",
+    "object": "/Users/christofferbuusmann/Work/PwnedPasswords/PwnedPasswords/.build/x86_64-apple-macosx10.10/debug/PwnedPasswords.build/String+Slice.swift.o",
+    "swiftmodule": "/Users/christofferbuusmann/Work/PwnedPasswords/PwnedPasswords/.build/x86_64-apple-macosx10.10/debug/PwnedPasswords.build/String+Slice~partial.swiftmodule",
+    "swift-dependencies": "/Users/christofferbuusmann/Work/PwnedPasswords/PwnedPasswords/.build/x86_64-apple-macosx10.10/debug/PwnedPasswords.build/String+Slice.swiftdeps"
+  }
+}
