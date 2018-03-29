@@ -2,8 +2,8 @@
 
 import Quick
 import Nimble
-@testable import PwnedPasswords
 import Foundation
+@testable import PwnedPasswords
 
 internal class MockApiClient: Api {
   
@@ -37,23 +37,23 @@ class TableOfContentsSpec: QuickSpec {
         client = PwnedPasswords(apiClient: apiClient)
       }
       
-      context("it hashes a string correctly") {
-        it("returns the correct hash for \(plainPassword)") {
+      context("hashes a string correctly") {
+        it("and returns the correct hash for \(plainPassword)") {
           let hash = client.sha1(plainPassword).uppercased()
           expect(hash).to(equal(hashedPassword))
         }
-        it("returns the correct prefix") {
+        it("and returns the correct prefix") {
           let clientPrefix = client.prefix(hashedPassword)
           expect(clientPrefix).to(equal(prefix))
           expect(clientPrefix.count).to(equal(5))
         }
-        it("returns the correct suffix") {
+        it("and returns the correct suffix") {
           let clientSuffix = client.suffix(hashedPassword)
           expect(clientSuffix).to(equal(suffix))
         }
       }
       
-      context("the public method checks the password") {
+      context("'check()''") {
         it("takes an input of type string of more than 0 characters") {
           let input = ""
           var error: PwnedError?
@@ -65,7 +65,7 @@ class TableOfContentsSpec: QuickSpec {
           expect(error).toNot(beNil())
           expect(error).to(equal(PwnedError.noEmpty))
         }
-        it("return a reponse given a correct input") {
+        it("returns a reponse given a correct input") {
           var occurences: Int?
           var error: Error?
           client.check(plainPassword, completion: { (o, e) in
@@ -78,8 +78,8 @@ class TableOfContentsSpec: QuickSpec {
         }
       }
       
-      context("it parses the string response") {
-        it("parses the string as a dictionary") {
+      context("when given a response") {
+        it("it parses as a dictionary with correct input") {
           let dict = try! client.parseResponse(testResponse)
           expect(dict).to(beAnInstanceOf(Dictionary<String, Int>.self))
           expect(dict[suffix]).to(beGreaterThan(1))
