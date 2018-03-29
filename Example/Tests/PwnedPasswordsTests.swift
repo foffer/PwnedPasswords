@@ -3,11 +3,12 @@
 import Quick
 import Nimble
 @testable import PwnedPasswords
+import Foundation
 
 internal class MockApiClient: Api {
   
   func getResponse(forPrefix prefix: String, completion: @escaping (String, Error?) -> Void) {
-    if #available(iOS 10.0, *) {
+    if #available(iOS 10.0, macOS 10.12, *) {
       Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) {_ in
         completion(testResponse, nil)
       }

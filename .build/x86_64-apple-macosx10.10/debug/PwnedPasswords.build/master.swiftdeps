@@ -1,8 +1,0 @@
-version: "Apple Swift version 4.0.3 (swiftlang-900.0.74.1 clang-900.0.39.2)"
-options: "504e4b6d9d1845c8beeb6497589600e5"
-build_time: [1522279109, 763813000]
-inputs:
-  "/Users/christofferbuusmann/Work/PwnedPasswords/PwnedPasswords/PwnedPasswords/Classes/ApiClient.swift": [1522278010, 0]
-  "/Users/christofferbuusmann/Work/PwnedPasswords/PwnedPasswords/PwnedPasswords/Classes/PwnedPasswords.swift": [1522276790, 0]
-  "/Users/christofferbuusmann/Work/PwnedPasswords/PwnedPasswords/PwnedPasswords/Classes/SHA1.swift": [1522276006, 0]
-  "/Users/christofferbuusmann/Work/PwnedPasswords/PwnedPasswords/PwnedPasswords/Classes/String+Slice.swift": [1522266397, 0]
