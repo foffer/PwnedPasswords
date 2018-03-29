@@ -22,6 +22,11 @@ pod 'PwnedPasswords'
 ```
 or
 
+```swift
+  .package(url: "https://github.com/foffer/PwnedPasswords.git", .branch("master"))
+```
+or
+
 copy the `PwnedPasswords.swift` and `ApiClient.swift` into your project.
 
 ## Usage
